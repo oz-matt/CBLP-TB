@@ -1,0 +1,8 @@
+D:/Cinna-BoN-FPGA-TB/SeqBlinkerTB/SeqBlinker.v {1 {vlog -work cinnalib -stats=none D:/Cinna-BoN-FPGA-TB/SeqBlinkerTB/SeqBlinker.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module SeqBlinker
+
+Top level modules:
+	SeqBlinker
+
+} {} {}}

@@ -1,0 +1,57 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/intelFPGA_lite/18.1/modelsim_ase/win32aloem
+vSeqBlinker
+!s110 1563126261
+!i10b 1
+!s100 KCJJ:]AQLcXg6eYk4SEU[3
+IX0KhhECK7XMEB22fEh7nQ3
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+Z1 dD:/Cinna-BoN-FPGA-TB
+w1562865917
+8D:/Cinna-BoN-FPGA-TB/SeqBlinkerTB/SeqBlinker.v
+FD:/Cinna-BoN-FPGA-TB/SeqBlinkerTB/SeqBlinker.v
+L0 1
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1563126260.000000
+!s107 D:/Cinna-BoN-FPGA-TB/SeqBlinkerTB/SeqBlinker.v|
+!s90 -reportprogress|300|-work|cinnalib|-stats=none|D:/Cinna-BoN-FPGA-TB/SeqBlinkerTB/SeqBlinker.v|
+!i113 1
+o-work cinnalib
+Z3 tCvgOpt 0
+n@seq@blinker
+vSeqBlinkerTB
+DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+!s110 1563126294
+!i10b 1
+!s100 c;EOEW<1C700CaPT?G1>E2
+IG:6beiKZ`FY7MM0<Bn=WE0
+R0
+!s105 SeqBlinkerTB_sv_unit
+S1
+R1
+w1563126290
+8D:/Cinna-BoN-FPGA-TB/SeqBlinkerTB/SeqBlinkerTB.sv
+FD:/Cinna-BoN-FPGA-TB/SeqBlinkerTB/SeqBlinkerTB.sv
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1563126294.000000
+!s107 D:/Cinna-BoN-FPGA-TB/SeqBlinkerTB/SeqBlinkerTB.sv|
+!s90 -reportprogress|300|-work|cinnalib|-sv|-stats=none|D:/Cinna-BoN-FPGA-TB/SeqBlinkerTB/SeqBlinkerTB.sv|
+!i113 1
+o-work cinnalib -sv
+R3
+n@seq@blinker@t@b
