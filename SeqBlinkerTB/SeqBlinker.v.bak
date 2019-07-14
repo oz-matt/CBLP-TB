@@ -24,10 +24,10 @@ end
   
   
   
-  reg[25:0] ctr_1hz = 26'h0000000;
-  reg[25:0] ctr_2hz = 26'h0000000;
-  reg[25:0] ctr_3hz = 26'h0000000;
-  reg[25:0] ctr_5hz = 26'h0000000;
+  reg[25:0] ctr_1hz;
+  reg[25:0] ctr_2hz;
+  reg[25:0] ctr_3hz;
+  reg[25:0] ctr_5hz;
   reg[25:0] ctr_10hz = 26'h0000000;
   
   always @(posedge i_clk)
@@ -62,6 +62,7 @@ end
   
   always @(posedge i_clk)
   begin
+outreg4<=~outreg4;
     ctr_5hz <= ctr_5hz + 1;
     if (ctr_5hz >= n_clks_5hz)
 	 begin
