@@ -56,13 +56,13 @@ o-work cinnalib -sv
 R3
 n@seq@blinker@t@b
 vUartRxr
-!s110 1563218386
+!s110 1563223515
 !i10b 1
-!s100 hL?Q27cl_AVS=NV0cX;D^3
-IMDF9b<[Y_H1zC0Hz;SUcY0
+!s100 dmo@Di9F6dDTUIGJY5H;z0
+IGADOB_BdOkhl=Yj9USEeo1
 R0
 R1
-w1563211613
+w1563223454
 8D:/Cinna-BoN-FPGA-TB/UartRxr.v
 FD:/Cinna-BoN-FPGA-TB/UartRxr.v
 L0 1
@@ -70,10 +70,32 @@ R2
 r1
 !s85 0
 31
-!s108 1563218386.000000
+!s108 1563223515.000000
 !s107 D:/Cinna-BoN-FPGA-TB/UartRxr.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/Cinna-BoN-FPGA-TB/UartRxr.v|
 !i113 1
-o-work work
+Z4 o-work work
 R3
 n@uart@rxr
+vUartRxrTB
+!s110 1563224025
+!i10b 1
+!s100 PU[7VX5=S]0RDZZi`UV[C1
+I5TRQ^[QVLJE<3z?Ong_5V2
+R0
+R1
+w1563224020
+8D:/Cinna-BoN-FPGA-TB/UartRxrTB.v
+FD:/Cinna-BoN-FPGA-TB/UartRxrTB.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1563224025.000000
+!s107 D:/Cinna-BoN-FPGA-TB/UartRxrTB.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Cinna-BoN-FPGA-TB/UartRxrTB.v|
+!i113 1
+R4
+R3
+n@uart@rxr@t@b
