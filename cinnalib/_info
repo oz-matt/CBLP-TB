@@ -55,3 +55,25 @@ r1
 o-work cinnalib -sv
 R3
 n@seq@blinker@t@b
+vUartRxr
+!s110 1563218386
+!i10b 1
+!s100 hL?Q27cl_AVS=NV0cX;D^3
+IMDF9b<[Y_H1zC0Hz;SUcY0
+R0
+R1
+w1563211613
+8D:/Cinna-BoN-FPGA-TB/UartRxr.v
+FD:/Cinna-BoN-FPGA-TB/UartRxr.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1563218386.000000
+!s107 D:/Cinna-BoN-FPGA-TB/UartRxr.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Cinna-BoN-FPGA-TB/UartRxr.v|
+!i113 1
+o-work work
+R3
+n@uart@rxr
