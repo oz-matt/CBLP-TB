@@ -1,6 +1,6 @@
 module SeqBlinkerTB();
 
-wire w1,w2,w3,w4,w5 =0;
+wire w1,w2,w3,w4,w5;
 
 reg r_fakeclock;
 

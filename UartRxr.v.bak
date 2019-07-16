@@ -48,5 +48,8 @@ module UartRxr
       end
     endcase
   end
+
+assign o_data_ready = data_ready;
+
 endmodule
 
