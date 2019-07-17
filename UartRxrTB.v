@@ -20,31 +20,30 @@ end
 
 always #1 r_fakeclock = ~r_fakeclock;
 
+task write_fake_byte;
+input[7:0] byte;
+integer i;
+  begin
+
+    r_dataline <= 0; //Start bit
+    
+    for(i=0;i<8;i=i+1)
+    begin
+      #20
+      r_dataline <= byte[7-i];
+    end
+
+    #20
+    r_dataline <= 1;  //Stop bit
+    
+  end
+endtask
+
 initial
 begin
   #40
-  r_dataline <= 0; //Start bit
-
-  #20
-  r_dataline <= 0;
-  #20
-  r_dataline <= 1;
-  #20
-  r_dataline <= 0;
-  #20
-  r_dataline <= 1;
-  #20
-  r_dataline <= 0;
-  #20
-  r_dataline <= 0;
-  #20
-  r_dataline <= 0;
-  #20
-  r_dataline <= 1;
-
-  #20
-  r_dataline <= 1;  //Stop bit
-
+  
+  write_fake_byte(8'h7A);
 
   $display("Q sent");
   $finish;

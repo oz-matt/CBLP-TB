@@ -11,6 +11,7 @@ module UartRxr
   parameter CONFIRMING_START_BIT = 3'b001;
   parameter GETTING_NEXT_DATA_BIT = 3'b010;
   parameter WAITING_FOR_STOP_BIT = 3'b011;
+  parameter CLEANUP = 3'b100;
 
   reg[2:0] current_state = WAITING_FOR_START_BIT;
   reg data_ready = 0;
@@ -25,9 +26,7 @@ module UartRxr
       WAITING_FOR_START_BIT :
       begin
         if (i_rx_data_line == 0)
-        begin
           current_state <= CONFIRMING_START_BIT;
-        end
       end
 
       CONFIRMING_START_BIT :
@@ -39,10 +38,8 @@ module UartRxr
         end
         else
         begin
-          if (clk_ctr < (CLKS_PER_BAUD_PERIOD/2)-1)
-          begin
+          if (clk_ctr < (CLKS_PER_BAUD_PERIOD-1)/2)
             clk_ctr <= clk_ctr + 1;
-          end
           else
           begin
             clk_ctr <= 0;
@@ -53,10 +50,8 @@ module UartRxr
 
       GETTING_NEXT_DATA_BIT :
       begin
-        if (clk_ctr < (CLKS_PER_BAUD_PERIOD-1))
-        begin
+        if (clk_ctr < CLKS_PER_BAUD_PERIOD-1)
           clk_ctr <= clk_ctr + 1;
-        end
         else
         begin
           data_byte[7 - bit_ctr] <= i_rx_data_line;
@@ -72,17 +67,15 @@ module UartRxr
 
       WAITING_FOR_STOP_BIT:
       begin
-        if (clk_ctr < (CLKS_PER_BAUD_PERIOD-1))
-        begin
+        if (clk_ctr < CLKS_PER_BAUD_PERIOD-1)
           clk_ctr <= clk_ctr + 1;
-        end
         else
         begin
           clk_ctr <= 0;
           if (i_rx_data_line == 1)
           begin
             data_ready <= 1;
-            current_state <= WAITING_FOR_START_BIT;
+            current_state <= CLEANUP;
           end
           else
           begin
@@ -90,6 +83,12 @@ module UartRxr
             current_state <= WAITING_FOR_START_BIT;
           end
         end
+      end
+
+      CLEANUP:
+      begin
+        data_ready <= 0;
+        current_state <= WAITING_FOR_START_BIT;
       end
     endcase
   end
