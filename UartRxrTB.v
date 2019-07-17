@@ -22,27 +22,27 @@ always #1 r_fakeclock = ~r_fakeclock;
 
 initial
 begin
-  #20
+  #40
   r_dataline <= 0; //Start bit
 
-  #10
+  #20
   r_dataline <= 0;
-  #10
+  #20
   r_dataline <= 1;
-  #10
+  #20
   r_dataline <= 0;
-  #10
+  #20
   r_dataline <= 1;
-  #10
+  #20
   r_dataline <= 0;
-  #10
+  #20
   r_dataline <= 0;
-  #10
+  #20
   r_dataline <= 0;
-  #10
+  #20
   r_dataline <= 1;
 
-  #10
+  #20
   r_dataline <= 1;  //Stop bit
 
 

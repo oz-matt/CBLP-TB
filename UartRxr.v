@@ -39,7 +39,7 @@ module UartRxr
         end
         else
         begin
-          if (clk_ctr < (CLKS_PER_BAUD_PERIOD/2))
+          if (clk_ctr < (CLKS_PER_BAUD_PERIOD/2)-1)
           begin
             clk_ctr <= clk_ctr + 1;
           end
@@ -53,13 +53,13 @@ module UartRxr
 
       GETTING_NEXT_DATA_BIT :
       begin
-        if (clk_ctr < (CLKS_PER_BAUD_PERIOD))
+        if (clk_ctr < (CLKS_PER_BAUD_PERIOD-1))
         begin
           clk_ctr <= clk_ctr + 1;
         end
         else
         begin
-          data_byte[bit_ctr] <= i_rx_data_line;
+          data_byte[7 - bit_ctr] <= i_rx_data_line;
           clk_ctr <= 0;
           bit_ctr <= bit_ctr + 1;
           if (bit_ctr >= 8)
@@ -72,7 +72,7 @@ module UartRxr
 
       WAITING_FOR_STOP_BIT:
       begin
-        if (clk_ctr < (CLKS_PER_BAUD_PERIOD))
+        if (clk_ctr < (CLKS_PER_BAUD_PERIOD-1))
         begin
           clk_ctr <= clk_ctr + 1;
         end
@@ -98,4 +98,3 @@ assign o_data_ready = data_ready;
 assign o_data_byte_out = data_byte;
 
 endmodule
-

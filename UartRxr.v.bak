@@ -14,8 +14,10 @@ module UartRxr
 
   reg[2:0] current_state = WAITING_FOR_START_BIT;
   reg data_ready = 0;
+  reg[7:0] data_byte = 0;
 
   reg[9:0] clk_ctr = 0;
+  reg[3:0] bit_ctr = 0;
 
   always @(posedge i_clk)
   begin
@@ -27,6 +29,7 @@ module UartRxr
           current_state <= CONFIRMING_START_BIT;
         end
       end
+
       CONFIRMING_START_BIT :
       begin
         if (i_rx_data_line == 1)
@@ -36,13 +39,55 @@ module UartRxr
         end
         else
         begin
-          if (clk_ctr < (CLKS_PER_BAUD_PERIOD/2))
+          if (clk_ctr < (CLKS_PER_BAUD_PERIOD/2)-1)
           begin
             clk_ctr <= clk_ctr + 1;
           end
           else
           begin
+            clk_ctr <= 0;
+            current_state <= GETTING_NEXT_DATA_BIT;
+          end
+        end
+      end
+
+      GETTING_NEXT_DATA_BIT :
+      begin
+        if (clk_ctr < (CLKS_PER_BAUD_PERIOD-1))
+        begin
+          clk_ctr <= clk_ctr + 1;
+        end
+        else
+        begin
+          data_byte[bit_ctr] <= i_rx_data_line;
+          clk_ctr <= 0;
+          bit_ctr <= bit_ctr + 1;
+          if (bit_ctr >= 8)
+          begin
+            bit_ctr <= 0;
+            current_state <= WAITING_FOR_STOP_BIT;
+          end
+        end
+      end
+
+      WAITING_FOR_STOP_BIT:
+      begin
+        if (clk_ctr < (CLKS_PER_BAUD_PERIOD-1))
+        begin
+          clk_ctr <= clk_ctr + 1;
+        end
+        else
+        begin
+          clk_ctr <= 0;
+          if (i_rx_data_line == 1)
+          begin
             data_ready <= 1;
+            current_state <= WAITING_FOR_START_BIT;
+          end
+          else
+          begin
+            data_ready <= 0;
+            current_state <= WAITING_FOR_START_BIT;
           end
         end
       end
@@ -50,6 +95,6 @@ module UartRxr
   end
 
 assign o_data_ready = data_ready;
+assign o_data_byte_out = data_byte;
 
 endmodule
-
