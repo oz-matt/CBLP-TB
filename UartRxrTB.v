@@ -23,8 +23,30 @@ always #1 r_fakeclock = ~r_fakeclock;
 initial
 begin
   #20
+  r_dataline <= 0; //Start bit
+
+  #10
   r_dataline <= 0;
-  $display("start bit sent");
+  #10
+  r_dataline <= 1;
+  #10
+  r_dataline <= 0;
+  #10
+  r_dataline <= 1;
+  #10
+  r_dataline <= 0;
+  #10
+  r_dataline <= 0;
+  #10
+  r_dataline <= 0;
+  #10
+  r_dataline <= 1;
+
+  #10
+  r_dataline <= 1;  //Stop bit
+
+
+  $display("Q sent");
   $finish;
 end
 
