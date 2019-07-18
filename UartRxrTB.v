@@ -2,9 +2,11 @@ module UartRxrTB();
 
 reg r_fakeclock;
 reg r_dataline;
+reg r_got_7a;
 
 wire w_data_ready;
 wire[7:0] w_data_byte;
+
 
 UartRxr #(10) UUT
   (.i_clk(r_fakeclock),
@@ -16,9 +18,16 @@ initial
 begin
   r_fakeclock = 0;
   r_dataline = 1;
+  r_got_7a = 0;
 end
 
 always #1 r_fakeclock = ~r_fakeclock;
+
+always @(posedge r_fakeclock)
+begin
+  if (w_data_byte == 8'h7A) 
+    r_got_7a <= 1;
+end
 
 task write_fake_byte;
 input[7:0] byte;
@@ -43,7 +52,7 @@ initial
 begin
   #40
   
-  write_fake_byte(8'h7A);
+  write_fake_byte(8'h79);
 
   $display("Q sent");
   $finish;

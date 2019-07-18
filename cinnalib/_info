@@ -78,13 +78,13 @@ Z4 o-work work
 R3
 n@uart@rxr
 vUartRxrTB
-!s110 1563393904
+!s110 1563396469
 !i10b 1
-!s100 ^oH=APngDmG7PUW<e_Gm<2
-I^maWNM77j;3l_hdi1T;>93
+!s100 ;Q<<KAVU:6O4WS]DAWE7k3
+I_?4ULRR1M[DDMf2G5E?U;2
 R0
 R1
-w1563393902
+w1563396461
 8D:/Cinna-BoN-FPGA-TB/UartRxrTB.v
 FD:/Cinna-BoN-FPGA-TB/UartRxrTB.v
 L0 1
@@ -92,10 +92,32 @@ R2
 r1
 !s85 0
 31
-!s108 1563393904.000000
+!s108 1563396469.000000
 !s107 D:/Cinna-BoN-FPGA-TB/UartRxrTB.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/Cinna-BoN-FPGA-TB/UartRxrTB.v|
 !i113 1
 R4
 R3
 n@uart@rxr@t@b
+vUartTxr
+!s110 1563475157
+!i10b 1
+!s100 69`oec2SYmSA^M3noc`2[3
+I:W@J>QR3alXl>R_ClQh<=2
+R0
+R1
+w1563475151
+8D:/Cinna-BoN-FPGA-TB/UartTxr.v
+FD:/Cinna-BoN-FPGA-TB/UartTxr.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1563475157.000000
+!s107 D:/Cinna-BoN-FPGA-TB/UartTxr.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Cinna-BoN-FPGA-TB/UartTxr.v|
+!i113 1
+R4
+R3
+n@uart@txr
