@@ -5,12 +5,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	SeqBlinker
 
-} {} {}} D:/Cinna-BoN-FPGA-TB/UartRxrTB.v {1 {vlog -work work -stats=none D:/Cinna-BoN-FPGA-TB/UartRxrTB.v
+} {} {}} D:/Cinna-BoN-FPGA-TB/UartTxr.v {1 {vlog -work work -stats=none D:/Cinna-BoN-FPGA-TB/UartTxr.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module UartRxrTB
+-- Compiling module UartTxr
 
 Top level modules:
-	UartRxrTB
+	UartTxr
 
 } {} {}} D:/Cinna-BoN-FPGA-TB/SeqBlinkerTB/SeqBlinkerTB.sv {1 {vlog -work cinnalib -sv -stats=none D:/Cinna-BoN-FPGA-TB/SeqBlinkerTB/SeqBlinkerTB.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -19,12 +19,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	SeqBlinkerTB
 
-} {} {}} D:/Cinna-BoN-FPGA-TB/UartTxr.v {1 {vlog -work work -stats=none D:/Cinna-BoN-FPGA-TB/UartTxr.v
+} {} {}} D:/Cinna-BoN-FPGA-TB/UartRxrTB.v {1 {vlog -work work -stats=none D:/Cinna-BoN-FPGA-TB/UartRxrTB.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module UartTxr
+-- Compiling module UartRxrTB
 
 Top level modules:
-	UartTxr
+	UartRxrTB
 
 } {} {}} D:/Cinna-BoN-FPGA-TB/UartTxrTB.v {1 {vlog -work work -stats=none D:/Cinna-BoN-FPGA-TB/UartTxrTB.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016

@@ -52,7 +52,7 @@ begin
       begin
         clk_ctr <= 0;
         bit_ctr <= bit_ctr + 1;
-        if (bit_ctr > 7)
+        if (bit_ctr >= 7)
         begin
           bit_ctr <= 0;
           r_current_state <= SEND_STOP_BIT;
