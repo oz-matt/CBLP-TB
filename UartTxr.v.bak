@@ -75,7 +75,7 @@ begin
   CLEANUP:
     begin
       r_send_complete <= 0;
-      r_current_state <= WAITING_FOR_DATA_VALID;
+      r_current_state <= WAIT_FOR_DATA_VALID;
     end
 
   endcase
