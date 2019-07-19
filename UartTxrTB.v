@@ -17,6 +17,15 @@ UartTxr #(10) UUT
   .o_send_complete(w_send_complete)
   );
 
+wire w_data_ready;
+wire[7:0] w_data_byte;
+
+UartRxr #(10) UUT2
+  (.i_clk(r_fakeclock),
+  .i_rx_data_line(w_dataline),
+  .o_data_ready(w_data_ready),
+  .o_data_byte_out(w_data_byte));
+
 initial
 begin
   r_fakeclock <= 0;
@@ -35,13 +44,11 @@ initial
 begin
   #30
   r_datavalid <= 1;
-  /*#30
-  forever
-  begin
-    #1
-    if(w_send_complete == 1)
-      r_datavalid <= 0;
-  end*/
+  #270
+  r_fakebyte <= w_data_byte;
+  r_datavalid <= 1;
+  
 end
+
 
 endmodule

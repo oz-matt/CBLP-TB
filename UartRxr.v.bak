@@ -38,7 +38,7 @@ module UartRxr
         end
         else
         begin
-          if (clk_ctr < (CLKS_PER_BAUD_PERIOD-1)/2)
+          if (clk_ctr < (CLKS_PER_BAUD_PERIOD/2)-2)
             clk_ctr <= clk_ctr + 1;
           else
           begin

@@ -52,7 +52,7 @@ initial
 begin
   #40
   
-  write_fake_byte(8'h7A);
+  write_fake_byte(8'h79);
 
   $display("Q sent");
   $finish;

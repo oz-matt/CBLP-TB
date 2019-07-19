@@ -38,7 +38,7 @@ module UartRxr
         end
         else
         begin
-          if (clk_ctr < (CLKS_PER_BAUD_PERIOD-1)/2)
+          if (clk_ctr < (CLKS_PER_BAUD_PERIOD/2)-2)
             clk_ctr <= clk_ctr + 1;
           else
           begin
@@ -54,7 +54,7 @@ module UartRxr
           clk_ctr <= clk_ctr + 1;
         else
         begin
-          data_byte[7 - bit_ctr] <= i_rx_data_line;
+          data_byte[bit_ctr] <= i_rx_data_line;
           clk_ctr <= 0;
           bit_ctr <= bit_ctr + 1;
           if (bit_ctr >= 8)

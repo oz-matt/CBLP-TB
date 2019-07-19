@@ -39,7 +39,7 @@ begin
     begin
       r_dataline <= 0;
       clk_ctr <= clk_ctr + 1;
-      if (clk_ctr > CLKS_PER_BIT - 1)
+      if (clk_ctr >= CLKS_PER_BIT - 1)
       begin
         clk_ctr <= 0;
         r_good_to_reset_dv <= 1;
@@ -51,7 +51,7 @@ begin
     begin
       r_dataline <= i_byte_to_send[bit_ctr];
       clk_ctr <= clk_ctr + 1;
-      if (clk_ctr > CLKS_PER_BIT - 1)
+      if (clk_ctr >= CLKS_PER_BIT - 1)
       begin
         clk_ctr <= 0;
         bit_ctr <= bit_ctr + 1;
@@ -67,7 +67,7 @@ begin
     begin
       r_dataline <= 1;
       clk_ctr <= clk_ctr + 1;
-      if (clk_ctr > CLKS_PER_BIT - 1)
+      if (clk_ctr >= CLKS_PER_BIT - 1)
       begin
         clk_ctr <= 0;
         r_send_complete <= 1;

@@ -4,6 +4,7 @@ module UartTxr #(
   input[7:0] i_byte_to_send,
   input i_data_valid,
   output o_dataline,
+  output o_good_to_reset_dv,
   output o_send_complete
   );
 
@@ -14,6 +15,7 @@ parameter SEND_STOP_BIT = 3'b011;
 parameter CLEANUP = 3'b100;
 
 reg r_dataline = 1;
+reg r_good_to_reset_dv = 0;
 reg r_send_complete = 1;
 
 reg[9:0] clk_ctr = 0;
@@ -40,6 +42,7 @@ begin
       if (clk_ctr > CLKS_PER_BIT - 1)
       begin
         clk_ctr <= 0;
+        r_good_to_reset_dv <= 1;
         r_current_state <= SEND_DATA_BITS;
       end
     end
@@ -76,12 +79,14 @@ begin
     begin
       r_send_complete <= 0;
       r_current_state <= WAIT_FOR_DATA_VALID;
+      r_good_to_reset_dv <= 0;
     end
 
   endcase
 end
 
 assign o_dataline = r_dataline;
+assign o_good_to_reset_dv = r_good_to_reset_dv;
 assign o_send_complete = r_send_complete;
 
 endmodule

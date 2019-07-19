@@ -14,6 +14,7 @@ UartRxr #(10) UUT
   .o_data_ready(w_data_ready),
   .o_data_byte_out(w_data_byte));
 
+
 initial
 begin
   r_fakeclock = 0;
