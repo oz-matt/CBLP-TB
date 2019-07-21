@@ -36,7 +36,7 @@ module AdcReceiver
   always @(posedge i_clk)
   begin
     r_SPI_Clk_Ctr <=  r_SPI_Clk_Ctr + 1;
-    if(r_SPI_Clk_Ctr >= SPI_CLK_DIVISOR - 1)
+    if(r_SPI_Clk_Ctr >= SPI_CLK_DIVISOR)
     begin
       r_SPI_Clk <= ~r_SPI_Clk;
       r_SPI_Clk_Ctr <= 0;

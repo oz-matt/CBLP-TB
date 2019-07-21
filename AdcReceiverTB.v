@@ -11,4 +11,7 @@ module AdcReceiverTB();
 
   always #1 r_fakeclock <= ~r_fakeclock;
 
+  AdcReceiver #(50) UUT
+  (.i_clk(r_fakeclock));
+
 endmodule
