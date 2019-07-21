@@ -8,65 +8,87 @@ z2
 !i10f 100
 cModel Technology
 dD:/intelFPGA_lite/18.1/modelsim_ase/win32aloem
+vAdcReceiverTB
+!s110 1563736240
+!i10b 1
+!s100 0SYki6DEem8SH6HE87I9e3
+I@VH996a8_jTSk4R@XzcW41
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+Z1 dD:/Cinna-BoN-FPGA-TB
+w1563736209
+8D:/Cinna-BoN-FPGA-TB/AdcReceiverTB.v
+FD:/Cinna-BoN-FPGA-TB/AdcReceiverTB.v
+L0 3
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1563736240.000000
+!s107 D:/Cinna-BoN-FPGA-TB/AdcReceiverTB.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Cinna-BoN-FPGA-TB/AdcReceiverTB.v|
+!i113 1
+Z3 o-work work
+Z4 tCvgOpt 0
+n@adc@receiver@t@b
 vSeqBlinker
-Z0 !s110 1563566081
+Z5 !s110 1563566081
 !i10b 1
 !s100 PooAj1kNecK3>mW_aS2A;1
 I4S8hT8C6YV65AF0HBgbPC2
-Z1 VDg1SIo80bB@j0V0VzS_@n1
-Z2 dD:/Cinna-BoN-FPGA-TB
+R0
+R1
 w1563134041
 8D:/Cinna-BoN-FPGA-TB/SeqBlinkerTB/SeqBlinker.v
 FD:/Cinna-BoN-FPGA-TB/SeqBlinkerTB/SeqBlinker.v
 L0 1
-Z3 OV;L;10.5b;63
+R2
 r1
 !s85 0
 31
-Z4 !s108 1563566081.000000
+Z6 !s108 1563566081.000000
 !s107 D:/Cinna-BoN-FPGA-TB/SeqBlinkerTB/SeqBlinker.v|
 !s90 -reportprogress|300|-work|cinnalib|-stats=none|D:/Cinna-BoN-FPGA-TB/SeqBlinkerTB/SeqBlinker.v|
 !i113 1
 o-work cinnalib
-Z5 tCvgOpt 0
+R4
 n@seq@blinker
 vSeqBlinkerTB
 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-R0
+R5
 !i10b 1
 !s100 c;EOEW<1C700CaPT?G1>E2
 IG:6beiKZ`FY7MM0<Bn=WE0
-R1
+R0
 !s105 SeqBlinkerTB_sv_unit
 S1
-R2
+R1
 w1563227979
 8D:/Cinna-BoN-FPGA-TB/SeqBlinkerTB/SeqBlinkerTB.sv
 FD:/Cinna-BoN-FPGA-TB/SeqBlinkerTB/SeqBlinkerTB.sv
 L0 1
-R3
+R2
 r1
 !s85 0
 31
-R4
+R6
 !s107 D:/Cinna-BoN-FPGA-TB/SeqBlinkerTB/SeqBlinkerTB.sv|
 !s90 -reportprogress|300|-work|cinnalib|-sv|-stats=none|D:/Cinna-BoN-FPGA-TB/SeqBlinkerTB/SeqBlinkerTB.sv|
 !i113 1
 o-work cinnalib -sv
-R5
+R4
 n@seq@blinker@t@b
 vUartRxr
 !s110 1563566723
 !i10b 1
 !s100 M0j8Om>]6Dm[6cHVL[YT41
 I34_790S>C=lU^a1OFM^`_0
+R0
 R1
-R2
 w1563566713
 8D:/Cinna-BoN-FPGA-TB/UartRxr.v
 FD:/Cinna-BoN-FPGA-TB/UartRxr.v
 L0 1
-R3
+R2
 r1
 !s85 0
 31
@@ -74,65 +96,65 @@ r1
 !s107 D:/Cinna-BoN-FPGA-TB/UartRxr.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/Cinna-BoN-FPGA-TB/UartRxr.v|
 !i113 1
-Z6 o-work work
-R5
+R3
+R4
 n@uart@rxr
 vUartRxrTB
-R0
+!s110 1563567593
 !i10b 1
-!s100 ;Q<<KAVU:6O4WS]DAWE7k3
-I_?4ULRR1M[DDMf2G5E?U;2
+!s100 PZoCLEN22nbIWBaM8XMaK2
+IDn>U^DKT2IoCcA`5S^<9:1
+R0
 R1
-R2
-w1563396461
+w1563566978
 8D:/Cinna-BoN-FPGA-TB/UartRxrTB.v
 FD:/Cinna-BoN-FPGA-TB/UartRxrTB.v
 L0 1
-R3
+R2
 r1
 !s85 0
 31
-R4
+!s108 1563567593.000000
 !s107 D:/Cinna-BoN-FPGA-TB/UartRxrTB.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/Cinna-BoN-FPGA-TB/UartRxrTB.v|
 !i113 1
-R6
-R5
+R3
+R4
 n@uart@rxr@t@b
 vUartTxr
-R0
+R5
 !i10b 1
 !s100 lhgi?NjdQ[A[A3]eo:3IV1
 I<OjoJM28MXCbI78ame^A00
+R0
 R1
-R2
 w1563566023
 8D:/Cinna-BoN-FPGA-TB/UartTxr.v
 FD:/Cinna-BoN-FPGA-TB/UartTxr.v
 L0 1
-R3
+R2
 r1
 !s85 0
 31
-R4
+R6
 !s107 D:/Cinna-BoN-FPGA-TB/UartTxr.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/Cinna-BoN-FPGA-TB/UartTxr.v|
 !i113 1
-R6
-R5
+R3
+R4
 n@uart@txr
 vUartTxrTB
 !s110 1563566637
 !i10b 1
 !s100 ^7ob@:Eg^AmZ8k_8]f[Mz2
 I3hzcAeG<n`NQB@OVdbbbo0
+R0
 R1
-R2
 w1563566625
 8D:/Cinna-BoN-FPGA-TB/UartTxrTB.v
 FD:/Cinna-BoN-FPGA-TB/UartTxrTB.v
 L0 1
-R3
+R2
 r1
 !s85 0
 31
@@ -140,6 +162,6 @@ r1
 !s107 D:/Cinna-BoN-FPGA-TB/UartTxrTB.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/Cinna-BoN-FPGA-TB/UartTxrTB.v|
 !i113 1
-R6
-R5
+R3
+R4
 n@uart@txr@t@b
