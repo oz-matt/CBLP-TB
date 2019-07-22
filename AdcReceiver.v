@@ -88,30 +88,28 @@ module AdcReceiver
           r_sck <= 0;
           if (r_TX_Bit_Counter <= 5)
           begin
-            r_serial_tx <= i_tx_bits[r_TX_Bit_Counter];
+            r_serial_tx <= i_tx_bits[5 - r_TX_Bit_Counter];
             r_TX_Bit_Counter <= r_TX_Bit_Counter + 1;
           end
           if (r_RX_Bit_Counter > 11)
           begin
             r_current_state <= WAITING_TACQ_DELAY;
             r_RX_Bit_Counter <= 0;
+            r_TX_Bit_Counter <= 0;
           end
+          else
+            r_RX_Bit_Counter <= r_RX_Bit_Counter + 1;
         end
-        if (r_RX_Bit_Counter <= 11)
+        if (r_RX_Bit_Counter <= 12)
         begin
-          if (r_clk_ctr == 25)
+          if (r_clk_ctr == 25 && r_RX_Bit_Counter <= 11)
             r_sck <= 1;
           if (r_clk_ctr == 27)
-            r_rx_data[r_RX_Bit_Counter] <= i_serial_rx;
-          r_RX_Bit_Counter <= r_RX_Bit_Counter + 1;
+            r_rx_data[11 - (r_RX_Bit_Counter - 1)] <= i_serial_rx;
         end
         r_clk_ctr <= r_clk_ctr + 1;
         if (r_clk_ctr >= 50)
-        begin
-          if (r_RX_Bit_Counter > 11)
-            r_current_state <= WAITING_TACQ_DELAY;
           r_clk_ctr <= 0;
-        end
       end
 
       WAITING_TACQ_DELAY:

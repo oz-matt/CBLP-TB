@@ -9,13 +9,13 @@ z2
 cModel Technology
 dD:/intelFPGA_lite/18.1/modelsim_ase/win32aloem
 vAdcReceiver
-!s110 1563802296
+!s110 1563822280
 !i10b 1
-!s100 aIRc?BNLE4GE>SoDBUd1f0
-IR^@n5?[8J9;[C:nOiQgz<0
+!s100 g7a?7:C2UnPNC1chDmQIK1
+IkA`ZNZ[`LITeMJZj?<nfU1
 Z0 VDg1SIo80bB@j0V0VzS_@n1
 Z1 dD:/Cinna-BoN-FPGA-TB
-w1563802292
+w1563822267
 8D:/Cinna-BoN-FPGA-TB/AdcReceiver.v
 FD:/Cinna-BoN-FPGA-TB/AdcReceiver.v
 L0 1
@@ -23,7 +23,7 @@ Z2 OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1563802296.000000
+!s108 1563822279.000000
 !s107 D:/Cinna-BoN-FPGA-TB/AdcReceiver.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/Cinna-BoN-FPGA-TB/AdcReceiver.v|
 !i113 1
@@ -31,13 +31,13 @@ Z3 o-work work
 Z4 tCvgOpt 0
 n@adc@receiver
 vAdcReceiverTB
-!s110 1563741147
+!s110 1563821918
 !i10b 1
-!s100 Em32@9nzS^]17Qd;6YAi50
-I<fY=V6_G?UcML?Z;:UDS_3
+!s100 aEaFMgJ143Bo_YgZdNO=B3
+I6D8lEzkkoZnkX97S?V5MD2
 R0
 R1
-w1563741143
+w1563821898
 8D:/Cinna-BoN-FPGA-TB/AdcReceiverTB.v
 FD:/Cinna-BoN-FPGA-TB/AdcReceiverTB.v
 L0 3
@@ -45,7 +45,7 @@ R2
 r1
 !s85 0
 31
-!s108 1563741147.000000
+!s108 1563821918.000000
 !s107 D:/Cinna-BoN-FPGA-TB/AdcReceiverTB.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/Cinna-BoN-FPGA-TB/AdcReceiverTB.v|
 !i113 1
