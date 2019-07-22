@@ -2,10 +2,11 @@ module AdcReceiver
   #(parameter SPI_CLK_DIVISOR = 50)
   (input i_clk,
   input[5:0] i_tx_bits,
-  input i_convert_en,
+  input i_request_conversion,
 
   output o_rx_dv,
   output[11:0] o_rx_data,
+  output o_conv_in_process,
 
   // Chip IO
   input i_serial_rx,
@@ -15,7 +16,7 @@ module AdcReceiver
   );
 
   reg r_rx_dv = 0;
-  reg[11:0] r_rx_data;
+  reg[11:0] r_rx_data = 0;
 
   reg r_convst = 0;
   reg r_sck = 0;
@@ -24,12 +25,13 @@ module AdcReceiver
   reg [$clog2(SPI_CLK_DIVISOR*2):0] r_SPI_Clk_Ctr = 0;
   reg r_SPI_Clk = 0;
   reg[5:0] r_tx_bits;
-  reg r_tx_dv;
 
   reg[6:0] r_clk_ctr = 0;
 
-  reg[3:0] r_RX_Bit_Count;
-  reg[2:0] r_TX_Bit_Count;
+  reg[3:0] r_RX_Bit_Counter = 0;
+  reg[2:0] r_TX_Bit_Counter = 0;
+
+  reg r_conv_in_process = 0;
 
   //State machine nodes
   parameter READY_FOR_NEXT_CONVERSION = 3'b000;
@@ -44,28 +46,22 @@ module AdcReceiver
 
   always @(posedge i_clk)
   begin
-    r_SPI_Clk_Ctr <=  r_SPI_Clk_Ctr + 1;
-    if(r_SPI_Clk_Ctr >= SPI_CLK_DIVISOR - 1)
-    begin
-      r_SPI_Clk <= ~r_SPI_Clk;
-      r_SPI_Clk_Ctr <= 0;
-    end
-  end
-
-  always @(posedge i_clk)
-  begin
     case(r_current_state)
       
       READY_FOR_NEXT_CONVERSION:
       begin
-        if(i_convert_en == 1)
+        if(i_request_conversion == 1)
+        begin
           r_current_state <= SENDING_CONVST_HIGH;
+          r_rx_dv <= 0;
+        end
       end
 
       SENDING_CONVST_HIGH:
       begin
         r_convst <= 1;
         r_current_state <= WAITING_TCONV_PLUS_NAP_DELAY;
+        r_conv_in_process <= 1;
       end
 
       WAITING_TCONV_PLUS_NAP_DELAY:
@@ -87,7 +83,7 @@ module AdcReceiver
 
       TRANSFERING_DATA:
       begin
-        if (r_bit_ctr == 0)
+        if (r_clk_ctr == 0)
         begin
           r_sck <= 0;
           if (r_TX_Bit_Counter <= 5)
@@ -96,39 +92,45 @@ module AdcReceiver
             r_TX_Bit_Counter <= r_TX_Bit_Counter + 1;
           end
           if (r_RX_Bit_Counter > 11)
+          begin
             r_current_state <= WAITING_TACQ_DELAY;
+            r_RX_Bit_Counter <= 0;
+          end
         end
         if (r_RX_Bit_Counter <= 11)
         begin
-          if (r_bit_ctr == 25)
+          if (r_clk_ctr == 25)
             r_sck <= 1;
-          if (r_bit_ctr == 27)
+          if (r_clk_ctr == 27)
             r_rx_data[r_RX_Bit_Counter] <= i_serial_rx;
           r_RX_Bit_Counter <= r_RX_Bit_Counter + 1;
         end
-        r_bit_ctr <= r_bit_ctr + 1;
-        if (r_bit_ctr >= 50)
+        r_clk_ctr <= r_clk_ctr + 1;
+        if (r_clk_ctr >= 50)
         begin
           if (r_RX_Bit_Counter > 11)
             r_current_state <= WAITING_TACQ_DELAY;
-          r_bit_ctr <= 0;
+          r_clk_ctr <= 0;
         end
       end
 
-    WAITING_TACQ_DELAY:
-    begin
-      r_current_state <= CLEANUP;
-    end
-
-    CLEANUP:
-    begin
-      r_current_state <= READY_FOR_NEXT_CONVERSION;
-    end
-      
+      WAITING_TACQ_DELAY:
+      begin
+        r_current_state <= CLEANUP;
+      end
+ 
+      CLEANUP:
+      begin
+        r_rx_dv <= 1;
+        r_conv_in_process <= 0;
+        r_current_state <= READY_FOR_NEXT_CONVERSION;
+      end
+    endcase
   end
 
   assign o_rx_dv = r_rx_dv;
   assign o_rx_data = r_rx_data;
+  assign o_conv_in_process = r_conv_in_process;
 
   assign o_convst = r_convst;
   assign o_sck = r_sck;
