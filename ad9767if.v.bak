@@ -1,0 +1,10 @@
+module ad9767if
+  (output[14:0] o_dac_data);
+
+  reg[14:0] r_dac_data = 0;
+
+  
+
+  assign o_dac_data = r_dac_data;
+
+endmodule
