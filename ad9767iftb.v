@@ -14,7 +14,7 @@ module ad9767iftb();
 
   initial
   begin
-    #100
+    #10000
     $finish;
   end
 
