@@ -1,9 +1,9 @@
-D:/Cinna-BoN-FPGA-TB/ad9767if.v {1 {vlog -work work -stats=none D:/Cinna-BoN-FPGA-TB/ad9767if.v
+D:/Cinna-BoN-FPGA-TB/sinerom.v {1 {vlog -work work -stats=none D:/Cinna-BoN-FPGA-TB/sinerom.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module ad9767if
+-- Compiling module sinerom
 
 Top level modules:
-	ad9767if
+	sinerom
 
 } {} {}} D:/Cinna-BoN-FPGA-TB/AdcReceiver.v {1 {vlog -work work -stats=none D:/Cinna-BoN-FPGA-TB/AdcReceiver.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -19,12 +19,12 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	SeqBlinker
 
-} {} {}} D:/Cinna-BoN-FPGA-TB/UartTxr.v {1 {vlog -work work -stats=none D:/Cinna-BoN-FPGA-TB/UartTxr.v
+} {} {}} D:/Cinna-BoN-FPGA-TB/sineTB.v {1 {vlog -work work -stats=none D:/Cinna-BoN-FPGA-TB/sineTB.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module UartTxr
+-- Compiling module sineTB
 
 Top level modules:
-	UartTxr
+	sineTB
 
 } {} {}} D:/Cinna-BoN-FPGA-TB/SeqBlinkerTB/SeqBlinkerTB.sv {1 {vlog -work cinnalib -sv -stats=none D:/Cinna-BoN-FPGA-TB/SeqBlinkerTB/SeqBlinkerTB.sv
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
@@ -47,6 +47,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	ad9767iftb
 
+} {} {}} D:/Cinna-BoN-FPGA-TB/UartTxrTB.v {1 {vlog -work work -stats=none D:/Cinna-BoN-FPGA-TB/UartTxrTB.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module UartTxrTB
+
+Top level modules:
+	UartTxrTB
+
 } {} {}} D:/Cinna-BoN-FPGA-TB/AdcReceiverTB.v {1 {vlog -work work -stats=none D:/Cinna-BoN-FPGA-TB/AdcReceiverTB.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module AdcReceiverTB
@@ -61,11 +68,18 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	UartRxr
 
-} {} {}} D:/Cinna-BoN-FPGA-TB/UartTxrTB.v {1 {vlog -work work -stats=none D:/Cinna-BoN-FPGA-TB/UartTxrTB.v
+} {} {}} D:/Cinna-BoN-FPGA-TB/ad9767if.v {1 {vlog -work work -stats=none D:/Cinna-BoN-FPGA-TB/ad9767if.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module UartTxrTB
+-- Compiling module ad9767if
 
 Top level modules:
-	UartTxrTB
+	ad9767if
+
+} {} {}} D:/Cinna-BoN-FPGA-TB/UartTxr.v {1 {vlog -work work -stats=none D:/Cinna-BoN-FPGA-TB/UartTxr.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module UartTxr
+
+Top level modules:
+	UartTxr
 
 } {} {}}

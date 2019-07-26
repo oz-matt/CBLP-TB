@@ -1,0 +1,126 @@
+-- Copyright (C) 2018  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details.
+
+-- Quartus Prime generated Memory Initialization File (.mif)
+
+WIDTH=14;
+DEPTH=128;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=UNS;
+
+CONTENT BEGIN
+	0	:	8191;
+	1	:	8705;
+	2	:	9217;
+	3	:	9725;
+	4	:	10228;
+	5	:	10722;
+	6	:	11206;
+	7	:	11678;
+	8	:	12137;
+	9	:	12580;
+	10	:	13005;
+	11	:	13412;
+	12	:	13798;
+	13	:	14162;
+	14	:	14502;
+	15	:	14817;
+	16	:	15107;
+	17	:	15369;
+	18	:	15602;
+	19	:	15807;
+	20	:	15981;
+	21	:	16125;
+	22	:	16237;
+	23	:	16317;
+	24	:	16366;
+	25	:	16382;
+	26	:	16366;
+	27	:	16317;
+	28	:	16237;
+	29	:	16125;
+	30	:	15981;
+	31	:	15807;
+	32	:	15603;
+	33	:	15369;
+	34	:	15107;
+	35	:	14818;
+	36	:	14503;
+	37	:	14162;
+	38	:	13798;
+	39	:	13412;
+	40	:	13006;
+	41	:	12580;
+	42	:	12137;
+	43	:	11679;
+	44	:	11207;
+	45	:	10723;
+	46	:	10228;
+	47	:	9726;
+	48	:	9218;
+	49	:	8706;
+	50	:	8191;
+	51	:	7677;
+	52	:	7165;
+	53	:	6656;
+	54	:	6154;
+	55	:	5660;
+	56	:	5176;
+	57	:	4704;
+	58	:	4245;
+	59	:	3802;
+	60	:	3376;
+	61	:	2970;
+	62	:	2584;
+	63	:	2220;
+	64	:	1880;
+	65	:	1564;
+	66	:	1275;
+	67	:	1013;
+	68	:	779;
+	69	:	575;
+	70	:	400;
+	71	:	257;
+	72	:	144;
+	73	:	64;
+	74	:	15;
+	75	:	0;
+	76	:	15;
+	77	:	63;
+	78	:	144;
+	79	:	256;
+	80	:	400;
+	81	:	574;
+	82	:	778;
+	83	:	1012;
+	84	:	1273;
+	85	:	1563;
+	86	:	1878;
+	87	:	2218;
+	88	:	2582;
+	89	:	2968;
+	90	:	3374;
+	91	:	3800;
+	92	:	4243;
+	93	:	4701;
+	94	:	5174;
+	95	:	5658;
+	96	:	6152;
+	97	:	6654;
+	98	:	7162;
+	99	:	7675;
+	100	:	8189;
+	[101..127]  :   0;
+END;

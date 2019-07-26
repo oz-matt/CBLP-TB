@@ -141,6 +141,49 @@ R6
 o-work cinnalib -sv
 R4
 n@seq@blinker@t@b
+vsinerom
+!s110 1564099047
+!i10b 1
+!s100 :C?6mzCbke@n10@1HI3]62
+II>4N_9CgZzHFlVO_:Bf6_0
+R0
+R1
+w1564099026
+8D:/Cinna-BoN-FPGA-TB/sinerom.v
+FD:/Cinna-BoN-FPGA-TB/sinerom.v
+L0 39
+R2
+r1
+!s85 0
+31
+!s108 1564099047.000000
+!s107 D:/Cinna-BoN-FPGA-TB/sinerom.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Cinna-BoN-FPGA-TB/sinerom.v|
+!i113 1
+R3
+R4
+vsineTB
+!s110 1564098977
+!i10b 1
+!s100 3<_>z[OkD83HP1d4TU15X0
+Ia@7EjI;RT_MTXF8`PYm[72
+R0
+R1
+w1564098970
+8D:/Cinna-BoN-FPGA-TB/sineTB.v
+FD:/Cinna-BoN-FPGA-TB/sineTB.v
+L0 3
+R2
+r1
+!s85 0
+31
+!s108 1564098976.000000
+!s107 D:/Cinna-BoN-FPGA-TB/sineTB.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Cinna-BoN-FPGA-TB/sineTB.v|
+!i113 1
+R3
+R4
+nsine@t@b
 vUartRxr
 !s110 1563566723
 !i10b 1
