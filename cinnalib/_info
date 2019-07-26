@@ -9,13 +9,13 @@ z2
 cModel Technology
 dD:/intelFPGA_lite/18.1/modelsim_ase/win32aloem
 vad9767if
-!s110 1564094381
+!s110 1564123033
 !i10b 1
 !s100 j;L4QL1Y]3Oo?jUCRRZkL2
 I?BV7FNV:n^ZMmY^Igcb2]1
 Z0 VDg1SIo80bB@j0V0VzS_@n1
 Z1 dD:/Cinna-BoN-FPGA-TB
-w1564094377
+w1564123028
 8D:/Cinna-BoN-FPGA-TB/ad9767if.v
 FD:/Cinna-BoN-FPGA-TB/ad9767if.v
 L0 1
@@ -23,20 +23,20 @@ Z2 OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1564094381.000000
+!s108 1564123033.000000
 !s107 D:/Cinna-BoN-FPGA-TB/ad9767if.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/Cinna-BoN-FPGA-TB/ad9767if.v|
 !i113 1
 Z3 o-work work
 Z4 tCvgOpt 0
 vad9767iftb
-!s110 1564089928
+!s110 1564172322
 !i10b 1
-!s100 P;@7?KO[9Z5GIf`i_z1081
-I60RHjj<Lj3`cOBec`_o:I1
+!s100 mVYeVJmMSFD:RAQ5^jE971
+IjSX@b:SO`ndNIM`h24]A00
 R0
 R1
-w1564089923
+w1564172309
 8D:/Cinna-BoN-FPGA-TB/ad9767iftb.v
 FD:/Cinna-BoN-FPGA-TB/ad9767iftb.v
 L0 3
@@ -44,9 +44,30 @@ R2
 r1
 !s85 0
 31
-!s108 1564089928.000000
+!s108 1564172322.000000
 !s107 D:/Cinna-BoN-FPGA-TB/ad9767iftb.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:/Cinna-BoN-FPGA-TB/ad9767iftb.v|
+!i113 1
+R3
+R4
+vad9767sine
+!s110 1564172032
+!i10b 1
+!s100 eRRLFeQzHNVFba^[Qj8L@2
+IG2XT8giGaSgN61GFhVZDH3
+R0
+R1
+w1564172027
+8D:/Cinna-BoN-FPGA-TB/ad9767sine.v
+FD:/Cinna-BoN-FPGA-TB/ad9767sine.v
+L0 1
+R2
+r1
+!s85 0
+31
+!s108 1564172032.000000
+!s107 D:/Cinna-BoN-FPGA-TB/ad9767sine.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Cinna-BoN-FPGA-TB/ad9767sine.v|
 !i113 1
 R3
 R4
