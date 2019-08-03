@@ -7,7 +7,7 @@ module ad9833
   input[15:0] adreg0,
   input[15:0] adreg1,
   output reg good_to_reset_go = 0,
-  output reg send_complete = 0;
+  output reg send_complete = 0,
   output reg fsync = 1,
   output reg sclk = 0,
   output reg sdata = 0
@@ -73,16 +73,22 @@ module ad9833
         if (clk_ctr == 0)
         begin
           sclk <= 0;
-          sdata <= control[15-bit_ctr];
+          if (word_ctr == 0)
+            sdata <= control[15-bit_ctr];
+          else if (word_ctr == 1)
+            sdata <= adreg0[15-bit_ctr];
+          else
+            sdata <= adreg1[15-bit_ctr];
         end
         if (clk_ctr == CLKS_PER_BIT / 2)
           sclk <= 1;
         if (bit_ctr >= 15 && clk_ctr >= ((CLKS_PER_BIT * 3) / 4))
         begin
           bit_ctr <= 0;
+          clk_ctr <= 0;
           current_node <= FSYNC_WAIT_HIGH_1;
         end
-        if (clk_ctr >= CLKS_PER_BIT)
+        else if (clk_ctr >= CLKS_PER_BIT)
         begin
           clk_ctr <= 0;
           bit_ctr <= bit_ctr + 1;   
@@ -111,7 +117,13 @@ module ad9833
         if (clk_ctr >= CLKS_PER_BIT)
         begin
           clk_ctr <= 0;
-          current_node <= WORD_TRANSFER_1;
+          if (word_ctr >= 2)
+            current_node <= SEND_COMPLETE;
+          else
+          begin
+            word_ctr <= word_ctr + 1;
+            current_node <= WORD_TRANSFER_1;
+          end
         end
         else
           clk_ctr <= clk_ctr + 1;
@@ -128,6 +140,7 @@ module ad9833
     CLEANUP:
       begin
         send_complete <= 0;
+        good_to_reset_go <= 0;
         clk_ctr <= 0;
         bit_ctr <= 0;
         word_ctr <= 0;

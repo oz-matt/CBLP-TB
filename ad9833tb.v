@@ -8,7 +8,7 @@ reg[15:0] control;
 reg[15:0] adreg0;
 reg[15:0] adreg1;
 
-wire good_to_reset_go, fsync, sclk, sdata;
+wire good_to_reset_go, send_complete, fsync, sclk, sdata;
 
 initial
 begin
@@ -29,6 +29,7 @@ ad9833 UUT
   .adreg0(adreg0),
   .adreg1(adreg1),
   .good_to_reset_go(good_to_reset_go),
+  .send_complete(send_complete),
   .fsync(fsync),
   .sclk(sclk),
   .sdata(sdata)
