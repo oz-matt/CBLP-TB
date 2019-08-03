@@ -7,6 +7,7 @@ module ad9833
   input[15:0] adreg0,
   input[15:0] adreg1,
   output reg good_to_reset_go = 0,
+  output reg send_complete = 0;
   output reg fsync = 1,
   output reg sclk = 0,
   output reg sdata = 0
@@ -19,11 +20,14 @@ module ad9833
   parameter WORD_TRANSFER_1	 	= 4'b0011;
   parameter FSYNC_WAIT_HIGH_1		= 4'b0100;
   parameter FSYNC_WAIT_LOW_1		= 4'b0101;
+  parameter SEND_COMPLETE		= 4'b0110;
+  parameter CLEANUP	                = 4'b0111;
 
   reg[3:0] current_node = 0;
 
   reg[15:0] clk_ctr = 0;
   reg[5:0] bit_ctr = 0;
+  reg[2:0] word_ctr = 0;
   
   always @(posedge clk)
   begin
@@ -111,6 +115,23 @@ module ad9833
         end
         else
           clk_ctr <= clk_ctr + 1;
+      end
+
+
+
+    SEND_COMPLETE:
+      begin
+        send_complete <= 1;
+        current_node <= CLEANUP;
+      end
+
+    CLEANUP:
+      begin
+        send_complete <= 0;
+        clk_ctr <= 0;
+        bit_ctr <= 0;
+        word_ctr <= 0;
+        current_node <= IDLE;
       end
 
     endcase
