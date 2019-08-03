@@ -14,9 +14,9 @@ initial
 begin
   r_fakeclock <= 0;
   go <= 0;
-  control <= 16'b1010101010101010;
-  adreg0 <= 0;
-  adreg1 <= 0;
+  control <= 16'b1010101010101101;
+  adreg0 <= 16'b1110101010101101;
+  adreg1 <= 16'b1011101010101101;
 end
 
 always #1 r_fakeclock <= ~r_fakeclock;

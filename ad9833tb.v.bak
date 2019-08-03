@@ -1,3 +1,5 @@
+`timescale 10ns / 10ns
+
 module ad9833tb();
 
 reg r_fakeclock, go;
@@ -12,7 +14,7 @@ initial
 begin
   r_fakeclock <= 0;
   go <= 0;
-  control <= 16'b1010101010101010;
+  control <= 16'b1010101010101101;
   adreg0 <= 0;
   adreg1 <= 0;
 end
