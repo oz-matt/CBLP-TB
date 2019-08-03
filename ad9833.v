@@ -1,5 +1,5 @@
 module ad9833
-  #(parameter CLKS_PER_BIT = 50)
+  #(parameter CLKS_PER_BIT = 10)
   (
   input clk,
   input go,
@@ -28,66 +28,68 @@ module ad9833
   reg[15:0] clk_ctr = 0;
   reg[5:0] bit_ctr = 0;
   
-always @(posedge clk)
-begin
-  case(current_node)
+  always @(posedge clk)
+  begin
+    case(current_node)
   
-  IDLE:
-    begin  
-      if (go)
-        current_node <= START_SCLK;
-    end
+    IDLE:
+      begin  
+        if (go)
+          current_node <= START_SCLK;
+      end
 
-  START_SCLK:
-    begin
-      if (clk_ctr == 0)
+    START_SCLK:
       begin
-        sclk <= 1;
-        good_to_reset_go <= 1;
-      end
-      if (clk_ctr >= CLKS_PER_BIT * 2)
-      begin
-        clk_ctr <= 0;
-        current_node <= START_FSYNC;
-      end
-      else
-        clk_ctr <= clk_ctr + 1;
-    end
-
-  START_FSYNC:
-    begin
-      if (clk_ctr == 0)
-        fsync <= 0;
-      if (clk_ctr >= CLKS_PER_BIT)
-      begin
-        clk_ctr <= 0;
-        current_node <= WORD_TRANSFER_1;
-      end
-      else
-        clk_ctr <= clk_ctr + 1;
-    end
-
-  WORD_TRANSFER_1:
-    begin
-      if (clk_ctr == 0)
-      begin
-        sclk <= 0;
-        sdata <= control[15-bit_ctr];
-      end
-      if (clk_ctr == CLKS_PER_BIT / 2)
-        sclk <= 1;
-      if (clk_ctr > CLKS_PER_BIT)
-      begin
-        clk_ctr <= 0;
-        if (bit_ctr >= 15)
+        if (clk_ctr == 0)
         begin
-          bit_ctr <= 0;
-          current_node <= FSYNC_WAIT_1;
+          sclk <= 1;
+          good_to_reset_go <= 1;
+        end
+        if (clk_ctr >= CLKS_PER_BIT * 2)
+        begin
+          clk_ctr <= 0;
+          current_node <= START_FSYNC;
         end
         else
-          bit_ctr <= bit_ctr + 1;
+          clk_ctr <= clk_ctr + 1;
       end
-    end
 
-  endcase
-end
+    START_FSYNC:
+      begin
+        if (clk_ctr == 0)
+          fsync <= 0;
+        if (clk_ctr >= CLKS_PER_BIT)
+        begin
+          clk_ctr <= 0;
+          current_node <= WORD_TRANSFER_1;
+        end
+        else
+          clk_ctr <= clk_ctr + 1;
+      end
+
+    WORD_TRANSFER_1:
+      begin
+        if (clk_ctr == 0)
+        begin
+          sclk <= 0;
+          sdata <= control[15-bit_ctr];
+        end
+        if (clk_ctr == CLKS_PER_BIT / 2)
+          sclk <= 1;
+        if (clk_ctr > CLKS_PER_BIT)
+        begin
+          clk_ctr <= 0;
+          if (bit_ctr >= 15)
+          begin
+            bit_ctr <= 0;
+            current_node <= FSYNC_WAIT_1;
+          end
+        end
+        else
+          bit_ctr <= bit_ctr + 1;     
+      end
+
+    endcase
+  end
+
+endmodule

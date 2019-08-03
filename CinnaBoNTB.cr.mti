@@ -82,6 +82,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	ad9767if
 
+} {} {}} D:/Cinna-BoN-FPGA-TB/ad9833tb.v {1 {vlog -work work -stats=none D:/Cinna-BoN-FPGA-TB/ad9833tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module ad9833tb
+
+Top level modules:
+	ad9833tb
+
 } {} {}} D:/Cinna-BoN-FPGA-TB/UartTxr.v {1 {vlog -work work -stats=none D:/Cinna-BoN-FPGA-TB/UartTxr.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module UartTxr
