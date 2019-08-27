@@ -4,11 +4,10 @@ module ad9833
   input clk,
   input go,
   input[15:0] control,
-  input[15:0] adreg0,
-  input[15:0] adreg1,
+  input[27:0] freq,
   output reg good_to_reset_go = 0,
   output reg send_complete = 0,
-  output reg fsync = 1,
+  output reg fsync,
   output reg sclk = 0,
   output reg sdata = 0
   );
@@ -23,6 +22,15 @@ module ad9833
   parameter SEND_COMPLETE		= 4'b0110;
   parameter CLEANUP	                = 4'b0111;
 
+  wire[15:0] adreg0;
+  wire[15:0] adreg1;
+  
+  //reg[15:0] adreg0 = 16'b0100000000001000;
+  //reg[15:0] adreg1 = 16'b0100000000000000;
+  
+  assign adreg0 = 16'h4000 | freq[13:0];
+  assign adreg1 = 16'h4000 | freq[27:14];
+
   reg[3:0] current_node = 0;
 
   reg[15:0] clk_ctr = 0;
@@ -34,7 +42,8 @@ module ad9833
     case(current_node)
   
     IDLE:
-      begin  
+      begin
+        fsync <= 1;
         if (go)
           current_node <= START_SCLK;
       end
@@ -101,10 +110,15 @@ module ad9833
       begin
         if (clk_ctr == 0)
           fsync <= 1;
+        if (clk_ctr == CLKS_PER_BIT / 4)
+          sclk <= 0;
         if (clk_ctr >= CLKS_PER_BIT * 2)
         begin
           clk_ctr <= 0;
-          current_node <= FSYNC_WAIT_LOW_1;
+          if (word_ctr >= 2)
+            current_node <= SEND_COMPLETE;
+          else
+            current_node <= FSYNC_WAIT_LOW_1;
         end
         else
           clk_ctr <= clk_ctr + 1;
@@ -117,19 +131,12 @@ module ad9833
         if (clk_ctr >= CLKS_PER_BIT)
         begin
           clk_ctr <= 0;
-          if (word_ctr >= 2)
-            current_node <= SEND_COMPLETE;
-          else
-          begin
-            word_ctr <= word_ctr + 1;
-            current_node <= WORD_TRANSFER_1;
-          end
+          word_ctr <= word_ctr + 1;
+          current_node <= WORD_TRANSFER_1;
         end
         else
           clk_ctr <= clk_ctr + 1;
       end
-
-
 
     SEND_COMPLETE:
       begin
