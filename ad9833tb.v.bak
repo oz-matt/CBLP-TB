@@ -5,13 +5,8 @@ module ad9833tb();
 reg r_fakeclock, go;
 
 reg[15:0] control;
-wire[15:0] adreg0;
-wire[15:0] adreg1;
 
-reg[27:0] freq = 28'h0000000;
-
-assign adreg0 = 16'h4000 | freq[13:0];
-assign adreg1 = 16'h4000 | freq[27:14];
+reg[27:0] freq = 28'h0f00000;
 
 wire good_to_reset_go, send_complete, fsync, sclk, sdata;
 
@@ -24,13 +19,12 @@ end
 
 always #1 r_fakeclock <= ~r_fakeclock;
 
-ad9833 UUT
+ad98k33 UUT
   (
   .clk(r_fakeclock),
   .go(go),
   .control(control),
-  .adreg0(adreg0),
-  .adreg1(adreg1),
+  .freq(freq),
   .good_to_reset_go(good_to_reset_go),
   .send_complete(send_complete),
   .fsync(fsync),

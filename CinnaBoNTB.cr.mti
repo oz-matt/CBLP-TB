@@ -47,7 +47,7 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	ad9767iftb
 
-} {} {}} D:/Cinna-BoN-FPGA-TB/UartTxrTB.v {1 {vlog -work work -stats=none {D:\Cinna-BoN-FPGA-TB\UartTxrTB.v}
+} {} {}} D:/Cinna-BoN-FPGA-TB/UartTxrTB.v {1 {vlog -work work -stats=none D:/Cinna-BoN-FPGA-TB/UartTxrTB.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module UartTxrTB
 
@@ -75,19 +75,19 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	UartRxr
 
-} {} {}} D:/Cinna-BoN-FPGA-TB/ad9767sine.v {1 {vlog -work work -stats=none D:/Cinna-BoN-FPGA-TB/ad9767sine.v
-Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
--- Compiling module ad9767sine
-
-Top level modules:
-	ad9767sine
-
 } {} {}} D:/Cinna-BoN-FPGA-TB/ad9767if.v {1 {vlog -work work -stats=none D:/Cinna-BoN-FPGA-TB/ad9767if.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module ad9767if
 
 Top level modules:
 	ad9767if
+
+} {} {}} D:/Cinna-BoN-FPGA-TB/ad9767sine.v {1 {vlog -work work -stats=none D:/Cinna-BoN-FPGA-TB/ad9767sine.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module ad9767sine
+
+Top level modules:
+	ad9767sine
 
 } {} {}} D:/Cinna-BoN-FPGA-TB/UartTxr.v {1 {vlog -work work -stats=none D:/Cinna-BoN-FPGA-TB/UartTxr.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
