@@ -158,13 +158,13 @@ R5
 R6
 n@adc@receiver@t@b
 vCvBramCtrl
-!s110 1579134457
+!s110 1579213067
 !i10b 1
-!s100 a2S14UUZ4XLV@>=6D_XFJ3
-I^ZLaei27W?H_ci=gY0H261
+!s100 mka_BGUF4`1F`kJV4;N@e3
+IL]Tm0JH[iWW@bHh]C^P_]1
 R1
 R2
-w1579134454
+w1579213052
 8D:\Cinna-BoN-FPGA-TB\cv_bramctrl.v
 FD:\Cinna-BoN-FPGA-TB\cv_bramctrl.v
 L0 3
@@ -172,7 +172,7 @@ R3
 r1
 !s85 0
 31
-!s108 1579134457.000000
+!s108 1579213067.000000
 !s107 D:\Cinna-BoN-FPGA-TB\cv_bramctrl.v|
 !s90 -reportprogress|300|-work|work|-stats=none|D:\Cinna-BoN-FPGA-TB\cv_bramctrl.v|
 !i113 1
