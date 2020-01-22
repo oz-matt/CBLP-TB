@@ -68,6 +68,13 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	ad9833
 
+} {} {}} D:/Cinna-BoN-FPGA-TB/cv_bramctrl.v {1 {vlog -work work -stats=none {D:\Cinna-BoN-FPGA-TB\cv_bramctrl.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module CvBramCtrl
+
+Top level modules:
+	CvBramCtrl
+
 } {} {}} D:/Cinna-BoN-FPGA-TB/UartRxr.v {1 {vlog -work work -stats=none D:/Cinna-BoN-FPGA-TB/UartRxr.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module UartRxr
