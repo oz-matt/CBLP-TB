@@ -1,0 +1,50 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Cinna-BoN-FPGA-TB
+vcinnabon_qsys
+!s110 1581998721
+!i10b 1
+!s100 9^3k_THgn2KP=XGKb0YYe0
+I<K3^g8XgAA7c4TZdRzo5V3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1581995407
+8D:/cinnabon/cinnabon_qsys/simulation/cinnabon_qsys.v
+FD:/cinnabon/cinnabon_qsys/simulation/cinnabon_qsys.v
+L0 6
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1581998721.000000
+!s107 D:/cinnabon/cinnabon_qsys/simulation/cinnabon_qsys.v|
+!s90 -reportprogress|300|D:/cinnabon/cinnabon_qsys/simulation/cinnabon_qsys.v|
+!i113 1
+Z3 tCvgOpt 0
+vcinnabontb
+!s110 1581998727
+!i10b 1
+!s100 F9hUX]S^4oCzo6BXPM^ZL1
+I5fE8WChMJUE78X1M_mfWB1
+R1
+R0
+w1581998683
+8D:/Cinna-BoN-FPGA-TB/cinnabontb.v
+FD:/Cinna-BoN-FPGA-TB/cinnabontb.v
+L0 3
+R2
+r1
+!s85 0
+31
+!s108 1581998727.000000
+!s107 D:/Cinna-BoN-FPGA-TB/cinnabontb.v|
+!s90 -reportprogress|300|D:/Cinna-BoN-FPGA-TB/cinnabontb.v|
+!i113 1
+R3

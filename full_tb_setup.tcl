@@ -12,6 +12,9 @@ set QSYS_SIMDIRA "D:/cinnabon"
 #
 # Source the generated IP simulation script.
 source $QSYS_SIMDIRA/mentor/msim_setup.tcl
+
+vlog -vlog01compat -work work +incdir+D:/cinnabon {D:/cinnabon/pll.v}
+#source $QSYS_SIMDIRA/simulation/modelsim/cinnabon_iputf_input/mentor/msim_setup.tcl
 #
 # Set any compilation options you require (this is unusual).
 # set USER_DEFINED_COMPILE_OPTIONS <compilation options>
@@ -40,7 +43,12 @@ set TOP_LEVEL_NAME "cinnabontb"
 elab
 #
 # Run the simulation.
-#run -a
+
+add wave *
+
+run 1us
+
+wave zoom out 8.0
 #
 # Report success to the shell.
 #exit -code 0

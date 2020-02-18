@@ -1,0 +1,31 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Cinna-BoN-FPGA-TB
+vcinnabon_qsys_pcie_ip_altgx_internal
+!s110 1581998705
+!i10b 1
+!s100 mV[S7c7Oaz@F7jgPkm:1V3
+ILU@2U6zW<XkYRQ:03>2552
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1581995434
+8D:/cinnabon/cinnabon_qsys/simulation/submodules/cinnabon_qsys_pcie_ip_altgx_internal.vo
+FD:/cinnabon/cinnabon_qsys/simulation/submodules/cinnabon_qsys_pcie_ip_altgx_internal.vo
+L0 32
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1581998705.000000
+!s107 D:/cinnabon/cinnabon_qsys/simulation/submodules/cinnabon_qsys_pcie_ip_altgx_internal.vo|
+!s90 -reportprogress|300|D:/cinnabon/cinnabon_qsys/simulation/submodules/cinnabon_qsys_pcie_ip_altgx_internal.vo|-work|altgx_internal|
+!i113 1
+o-work altgx_internal
+tCvgOpt 0

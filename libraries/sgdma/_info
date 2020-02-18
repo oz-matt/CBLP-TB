@@ -1,0 +1,412 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Cinna-BoN-FPGA-TB
+vbyteenable_gen_which_resides_within_cinnabon_qsys_sgdma
+Z1 !s110 1581998716
+!i10b 1
+!s100 `[k[1<7gjDe0?0CbZ[fGm1
+IXzZK<e^>7E?^A<zoJUH<G3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1581995410
+Z4 8D:/cinnabon/cinnabon_qsys/simulation/submodules/cinnabon_qsys_sgdma.v
+Z5 FD:/cinnabon/cinnabon_qsys/simulation/submodules/cinnabon_qsys_sgdma.v
+L0 2054
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1581998716.000000
+Z8 !s107 D:/cinnabon/cinnabon_qsys/simulation/submodules/cinnabon_qsys_sgdma.v|
+Z9 !s90 -reportprogress|300|D:/cinnabon/cinnabon_qsys/simulation/submodules/cinnabon_qsys_sgdma.v|-work|sgdma|
+!i113 1
+Z10 o-work sgdma
+Z11 tCvgOpt 0
+vcinnabon_qsys_sgdma
+R1
+!i10b 1
+!s100 0AQNFHVjJZdg4f1j]B]LO3
+In;@ezgCzU8<8nd6gYKE<k2
+R2
+R0
+R3
+R4
+R5
+L0 2704
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vcinnabon_qsys_sgdma_chain
+R1
+!i10b 1
+!s100 nHHb<3RZFP99Q4[8F^:S`0
+IFgCF:QR>2HYPOZHV@X[L;2
+R2
+R0
+R3
+R4
+R5
+L0 943
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vcinnabon_qsys_sgdma_command_fifo
+R1
+!i10b 1
+!s100 ]FM>@<8eh5R6IiI?<QS1l1
+I6>4TZ;OW4I?`k3i<DD>zY0
+R2
+R0
+R3
+R4
+R5
+L0 2452
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vcinnabon_qsys_sgdma_command_grabber
+R1
+!i10b 1
+!s100 <XiOh=@Zzn_B[9<GE;I@a1
+IoH^`ii[c]0a0J_0M11mbz3
+R2
+R0
+R3
+R4
+R5
+L0 1155
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vcinnabon_qsys_sgdma_desc_address_fifo
+R1
+!i10b 1
+!s100 UE8W]4Jl_:U_9Amm8T=zc3
+IL209e[hE^GR46<:g:]J@D2
+R2
+R0
+R3
+R4
+R5
+L0 2515
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vcinnabon_qsys_sgdma_m_read
+R1
+!i10b 1
+!s100 RAb3]ZdY2WcYZb@P]^ZmS1
+I5`<jH^MXG;_K8il@AA;NW2
+R2
+R0
+R3
+R4
+R5
+L0 1284
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vcinnabon_qsys_sgdma_m_readfifo
+R1
+!i10b 1
+!s100 Z0[b7VcG5^N?==>nC5<AC2
+IJR[m>T9_DfzhKgVBk=71O0
+R2
+R0
+R3
+R4
+R5
+L0 1632
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vcinnabon_qsys_sgdma_m_readfifo_m_readfifo
+R1
+!i10b 1
+!s100 YJHJ2P4LjJe=@=4=nYzIR0
+Ii9ZfKB4HT80nbJ<PCoj7Q2
+R2
+R0
+R3
+R4
+R5
+L0 1565
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vcinnabon_qsys_sgdma_m_write
+R1
+!i10b 1
+!s100 bN<2l?0oKCK3mkXoFdS[i0
+IFU^A_5SQ23N]n[nVSImQR2
+R2
+R0
+R3
+R4
+R5
+L0 2103
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vcinnabon_qsys_sgdma_status_token_fifo
+R1
+!i10b 1
+!s100 c=a1WY^]MD?X[Wd[QCO[f0
+IIZm2jZWR9EYWPT1QQkFRM2
+R2
+R0
+R3
+R4
+R5
+L0 2578
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vcinnabon_qsys_sgdma_stream_fifo
+R1
+!i10b 1
+!s100 >g2=PICnH2<R<c=J>LW[=1
+I>C<KKR00ia<Ii0oVAiJi42
+R2
+R0
+R3
+R4
+R5
+L0 2641
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vcontrol_status_slave_which_resides_within_cinnabon_qsys_sgdma
+R1
+!i10b 1
+!s100 YKTX_Sn^cG0Ln>ob6m0531
+IlRPRZ6lmbi:@dnmmHhh3m0
+R2
+R0
+R3
+R4
+R5
+L0 21
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vdescriptor_read_which_resides_within_cinnabon_qsys_sgdma
+R1
+!i10b 1
+!s100 9Y7k^AC4Y1`nELROLz^zc0
+IgHKH4Qe]nac=6MZhB4ca@2
+R2
+R0
+R3
+R4
+R5
+L0 501
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vdescriptor_read_which_resides_within_cinnabon_qsys_sgdma_control_bits_fifo
+R1
+!i10b 1
+!s100 3<LV;7]dZPi_mDcTITL?`3
+I24O?n2H;WQ4j_?m^AkZ@K0
+R2
+R0
+R3
+R4
+R5
+L0 438
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vdescriptor_write_which_resides_within_cinnabon_qsys_sgdma
+R1
+!i10b 1
+!s100 gUdZGEbEY09R:glV4OY?N1
+I0Q`Eg2HJFlbf;IRO7zUlG2
+R2
+R0
+R3
+R4
+R5
+L0 813
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vsixteen_bit_byteenable_FSM_which_resides_within_cinnabon_qsys_sgdma
+R1
+!i10b 1
+!s100 Zi@baLg]4EHkYmLdjkET_0
+I7PST[EKLD==R;G8:d9U;m2
+R2
+R0
+R3
+R4
+R5
+L0 1805
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+nsixteen_bit_byteenable_@f@s@m_which_resides_within_cinnabon_qsys_sgdma
+vsixty_four_bit_byteenable_FSM_which_resides_within_cinnabon_qsys_sgdma
+R1
+!i10b 1
+!s100 >`W9dhJjGFZSg<FW@9ScJ2
+IiQ9AoDMohf98oSI:>RGba0
+R2
+R0
+R3
+R4
+R5
+L0 1949
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+nsixty_four_bit_byteenable_@f@s@m_which_resides_within_cinnabon_qsys_sgdma
+vthirty_two_bit_byteenable_FSM_which_resides_within_cinnabon_qsys_sgdma
+R1
+!i10b 1
+!s100 iW_fAgafIoFJCY?=g4klT2
+ITBb:I3iDFSXZe;fE[_D2T3
+R2
+R0
+R3
+R4
+R5
+L0 1844
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+nthirty_two_bit_byteenable_@f@s@m_which_resides_within_cinnabon_qsys_sgdma

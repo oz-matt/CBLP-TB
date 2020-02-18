@@ -1,0 +1,94 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Cinna-BoN-FPGA-TB
+valtera_pcie_hard_ip_reset_controller
+Z1 !s110 1581998705
+!i10b 1
+!s100 =;NYSVcl6kN2]B<^IYMod0
+IU0ceK?Ng6[HV?1lc2z]:83
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1581995434
+8D:/cinnabon/cinnabon_qsys/simulation/submodules/altera_pcie_hard_ip_reset_controller.v
+FD:/cinnabon/cinnabon_qsys/simulation/submodules/altera_pcie_hard_ip_reset_controller.v
+L0 34
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1581998705.000000
+!s107 D:/cinnabon/cinnabon_qsys/simulation/submodules/altera_pcie_hard_ip_reset_controller.v|
+!s90 -reportprogress|300|D:/cinnabon/cinnabon_qsys/simulation/submodules/altera_pcie_hard_ip_reset_controller.v|-work|reset_controller_internal|
+!i113 1
+Z6 o-work reset_controller_internal
+Z7 tCvgOpt 0
+valtpcie_pll_100_250
+R1
+!i10b 1
+!s100 >7YA]`2d61`_oz>4kH_W41
+IfOkn6ffnYf8:BKbE[<1be3
+R2
+R0
+R3
+8D:/cinnabon/cinnabon_qsys/simulation/submodules/altpcie_pll_100_250.v
+FD:/cinnabon/cinnabon_qsys/simulation/submodules/altpcie_pll_100_250.v
+Z8 L0 49
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/cinnabon/cinnabon_qsys/simulation/submodules/altpcie_pll_100_250.v|
+!s90 -reportprogress|300|D:/cinnabon/cinnabon_qsys/simulation/submodules/altpcie_pll_100_250.v|-work|reset_controller_internal|
+!i113 1
+R6
+R7
+valtpcie_pll_125_250
+R1
+!i10b 1
+!s100 Fj_nGm3fHbVd1lkORn[cA2
+IIT_1V?z6AW@9;D[k??=dS1
+R2
+R0
+R3
+8D:/cinnabon/cinnabon_qsys/simulation/submodules/altpcie_pll_125_250.v
+FD:/cinnabon/cinnabon_qsys/simulation/submodules/altpcie_pll_125_250.v
+R8
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/cinnabon/cinnabon_qsys/simulation/submodules/altpcie_pll_125_250.v|
+!s90 -reportprogress|300|D:/cinnabon/cinnabon_qsys/simulation/submodules/altpcie_pll_125_250.v|-work|reset_controller_internal|
+!i113 1
+R6
+R7
+valtpcie_rs_serdes
+R1
+!i10b 1
+!s100 i6CAXB:f59VDO0WkGNFK32
+IendFY4na7zcZTdcaCdLIX1
+R2
+R0
+R3
+8D:/cinnabon/cinnabon_qsys/simulation/submodules/altpcie_rs_serdes.v
+FD:/cinnabon/cinnabon_qsys/simulation/submodules/altpcie_rs_serdes.v
+L0 33
+R4
+r1
+!s85 0
+31
+R5
+!s107 D:/cinnabon/cinnabon_qsys/simulation/submodules/altpcie_rs_serdes.v|
+!s90 -reportprogress|300|D:/cinnabon/cinnabon_qsys/simulation/submodules/altpcie_rs_serdes.v|-work|reset_controller_internal|
+!i113 1
+R6
+R7
